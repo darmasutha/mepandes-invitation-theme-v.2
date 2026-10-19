@@ -1,401 +1,649 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upacara Mepandes — Yoga &amp; Ditya</title>
+    <meta
+      name="description"
+      content="Undangan Upacara Manusa Yadnya Mepandes (Potong Gigi) Yoga & Ditya — Minggu, 15 November 2026, Taman Prakerti Bhuana."
+    />
+    <meta name="theme-color" content="#2B2A22" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="assets/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/couple.webp"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upacara Mepandes Yoga &amp; Ditya</title>
-  <meta name="description"
-    content="Undangan Upacara Manusa Yadnya Mepandes (Potong Gigi) Yoga & Ditya — Minggu, 15 November 2026." />
-  <meta name="theme-color" content="#2B2A22" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="assets/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="icon" href="assets/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="manifest" href="assets/site.webmanifest" />
-  <link rel="preload" as="image" href="assets/couple.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="assets/fonts/fonts.css" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <body class="is-locked">
+    <!-- ======================== GATE ======================== -->
+    <div
+      class="gate"
+      id="gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gateTitle"
+    >
+      <div class="gate__media" aria-hidden="true"></div>
+      <div class="gate__overlay" aria-hidden="true"></div>
+      <div class="gate__shade gate__shade--top" aria-hidden="true"></div>
+      <div class="gate__shade gate__shade--bottom" aria-hidden="true"></div>
 
-<body class="is-locked">
-  <!-- ======================== GATE ======================== -->
-  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
-    <div class="gate__media" aria-hidden="true"></div>
-    <div class="gate__overlay" aria-hidden="true"></div>
-    <div class="gate__shade gate__shade--top" aria-hidden="true"></div>
-    <div class="gate__shade gate__shade--bottom" aria-hidden="true"></div>
+      <div class="gate__content">
+        <div class="gate__top" aria-hidden="true"></div>
 
-    <div class="gate__content">
-      <div class="gate__top" aria-hidden="true"></div>
-
-      <div class="gate__centre">
-        <h1 class="gate__title" id="gateTitle" tabindex="-1">
-          Upacara Mepandes
-        </h1>
-        <p class="gate__subtitle">POTONG GIGI</p>
-        <span class="rule rule--cream" aria-hidden="true"></span>
-        <div class="gate__invitee" id="gateInvitee" hidden>
-          <p class="gate__to">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-          <p class="gate__guest" id="gateGuest"></p>
-        </div>
-        <p class="gate__intro">
-          Kami mengundang Bapak/Ibu/Saudara/i
-          untuk hadir di acara Mepandes kami.
-        </p>
-        <button class="btn btn--cream" id="openInvitation" type="button">
-          <svg class="icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="m3 7 9 6 9-6" />
-          </svg>
-          <span>BUKA UNDANGAN</span>
-        </button>
-        <noscript>
-          <p class="gate__noscript">
-            Aktifkan JavaScript untuk membuka undangan.
+        <div class="gate__centre">
+          <h1 class="gate__title" id="gateTitle" tabindex="-1">
+            Upacara Mepandes
+          </h1>
+          <p class="gate__subtitle">POTONG GIGI</p>
+          <span class="rule rule--cream" aria-hidden="true"></span>
+          <div class="gate__invitee" id="gateInvitee" hidden>
+            <p class="gate__to">Kepada Yth. Sdr/Ibu/Bpk:</p>
+            <p class="gate__guest" id="gateGuest"></p>
+          </div>
+          <p class="gate__intro">
+            Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
+            untuk hadir di acara Mepandes kami.
           </p>
-        </noscript>
-      </div>
+          <button class="btn btn--cream" id="openInvitation" type="button">
+            <svg
+              class="icon"
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            <span>BUKA UNDANGAN</span>
+          </button>
+          <noscript>
+            <p class="gate__noscript">
+              Aktifkan JavaScript untuk membuka undangan.
+            </p>
+          </noscript>
+        </div>
 
-      <div class="gate__bottom" aria-hidden="true"></div>
+        <div class="gate__bottom" aria-hidden="true"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- ======================== INVITATION ======================== -->
-  <main id="invitation" class="invitation" inert>
-    <a class="skip-link" href="#sambutanTitle">Lewati ke isi undangan</a>
+    <!-- ======================== INVITATION ======================== -->
+    <main id="invitation" class="invitation" inert>
+      <a class="skip-link" href="#sambutanTitle">Lewati ke isi undangan</a>
 
-    <!-- 00b · Pembuka -->
-    <section class="opening" id="pembuka" aria-labelledby="openingTitle">
-      <div class="opening__plate" aria-hidden="true"></div>
-      <div class="opening__centre">
-        <img class="opening__ornament" src="assets/patra-line-bold.webp" alt="" width="120" height="214"
-          aria-hidden="true" />
-        <p class="eyebrow eyebrow--olive">UPACARA MANUSA YADNYA MEPANDES</p>
-        <h1 class="display display--lg" id="openingTitle">
-          Yoga &amp; Ditya
-        </h1>
-        <span class="rule rule--olive opening__rule" aria-hidden="true"></span>
-        <p class="date-line">
-          <time datetime="2026-11-15">MINGGU, 15 NOVEMBER 2026</time>
-        </p>
-      </div>
+      <!-- 00b · Pembuka -->
+      <section class="opening" id="pembuka" aria-labelledby="openingTitle">
+        <div class="opening__plate" aria-hidden="true"></div>
+        <div class="opening__centre">
+          <img
+            class="opening__ornament"
+            src="assets/patra-line-bold.webp"
+            alt=""
+            width="120"
+            height="214"
+            aria-hidden="true"
+          />
+          <p class="eyebrow eyebrow--olive">UPACARA MANUSA YADNYA MEPANDES</p>
+          <h1 class="display display--lg" id="openingTitle">
+            Yoga &amp; Ditya
+          </h1>
+          <span
+            class="rule rule--olive opening__rule"
+            aria-hidden="true"
+          ></span>
+          <p class="date-line">
+            <time datetime="2026-11-15">MINGGU, 15 NOVEMBER 2026</time>
+          </p>
+        </div>
 
-      <div class="opening__footer">
-        <a class="scroll-cue" href="#sambutan">
-          SCROLL
-          <span aria-hidden="true">↓</span>
-          <span class="sr-only">— gulir ke detail informasi undangan</span>
-        </a>
-      </div>
-    </section>
+        <div class="opening__footer">
+          <a class="scroll-cue" href="#sambutan">
+            SCROLL
+            <span aria-hidden="true">↓</span>
+            <span class="sr-only">— gulir ke detail informasi undangan</span>
+          </a>
+        </div>
+      </section>
 
-    <button class="music-control" id="musicControl" type="button" aria-pressed="false" hidden>
-      <span class="music-control__label" id="musicLabel">MUSIK OFF</span>
-      <span class="music-control__icon" aria-hidden="true">
-        <svg class="icon music-control__icon--on" width="14" height="14" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18V5l12-2v13" />
-          <circle cx="6" cy="18" r="3" />
-          <circle cx="18" cy="16" r="3" />
-        </svg>
-        <svg class="icon music-control__icon--off" width="14" height="14" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18V5l12-2v13" />
-          <circle cx="6" cy="18" r="3" />
-          <circle cx="18" cy="16" r="3" />
-          <path d="M3 3l18 18" />
-        </svg>
-      </span>
-    </button>
+      <button
+        class="music-control"
+        id="musicControl"
+        type="button"
+        aria-pressed="false"
+        hidden
+      >
+        <span class="music-control__label" id="musicLabel">MUSIK OFF</span>
+        <span class="music-control__icon" aria-hidden="true">
+          <svg
+            class="icon music-control__icon--on"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg>
+          <svg
+            class="icon music-control__icon--off"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+            <path d="M3 3l18 18" />
+          </svg>
+        </span>
+      </button>
 
-    <!-- 01 · Sambutan -->
-    <section class="section section--paper intro" id="sambutan" aria-labelledby="sambutanTitle">
-      <div class="plate plate--intro-waringin" aria-hidden="true"></div>
-      <div class="plate plate--intro-pura" aria-hidden="true"></div>
+      <!-- 01 · Sambutan -->
+      <section
+        class="section section--paper intro"
+        id="sambutan"
+        aria-labelledby="sambutanTitle"
+      >
+        <div class="plate plate--intro-waringin" aria-hidden="true"></div>
+        <div class="plate plate--intro-pura" aria-hidden="true"></div>
 
-      <div class="container">
-        <h2 class="sr-only" id="sambutanTitle" tabindex="-1">Sambutan</h2>
-        <div class="intro__spread">
-          <div class="intro__letter reveal">
-            <p class="script script--lg">Om Swastyastu</p>
-            <p class="body-copy">
-              Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan
-              yang Maha Esa, kami bermaksud mengundang Bapak/Ibu/Saudara/i,
-              pada Acara Manusa Yadnya Mepandes (Potong Gigi) kedua putra
-              kami.
+        <div class="container">
+          <h2 class="sr-only" id="sambutanTitle" tabindex="-1">Sambutan</h2>
+          <div class="intro__spread">
+            <div class="intro__letter reveal">
+              <p class="script script--lg">Om Swastyastu</p>
+              <p class="body-copy">
+                Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan
+                yang Maha Esa, kami bermaksud mengundang Bapak/Ibu/Saudara/i,
+                pada Acara Manusa Yadnya Mepandes (Potong Gigi) kedua putra
+                kami.
+              </p>
+            </div>
+
+            <figure class="sloka reveal">
+              <p class="label">RG VEDA I.89.8</p>
+              <blockquote class="sloka__sanskrit" lang="sa">
+                &ldquo;Bhadram karnebhih srunuyama devah. Bhadram pasyemaksabhir
+                yajatrah. Sthirair angais tustuvamsas tanubhir, Vyasema
+                devahitam yadayuh.&rdquo;
+              </blockquote>
+              <span
+                class="rule rule--olive sloka__rule"
+                aria-hidden="true"
+              ></span>
+              <figcaption class="sloka__translation">
+                Ya Hyang Widhi Wasa, semoga telinga kami senantiasa mendengar
+                hal-hal yang suci. Semoga mata kami senantiasa melihat kebaikan
+                dalam pengabdian kami. Dengan tubuh yang teguh, izinkanlah kami
+                memuji keagungan-Mu sepanjang usia yang Engkau anugerahkan.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · Sane Mepandes -->
+      <section class="section section--bone names" id="sane-mepandes">
+        <div class="plate plate--names-waringin" aria-hidden="true"></div>
+        <div class="plate plate--names-pura" aria-hidden="true"></div>
+
+        <div class="container">
+          <div class="names__head">
+            <div class="names__title reveal">
+              <h2 class="script script--xl">Sane Mepandes</h2>
+            </div>
+            <p class="names__note reveal">
+              Kedua putra kami yang akan menjalani Upacara Manusa Yadnya
+              Mepandes (Potong Gigi).
             </p>
           </div>
 
-          <figure class="sloka reveal">
-            <p class="label">RG VEDA I.89.8</p>
-            <blockquote class="sloka__sanskrit" lang="sa">
-              &ldquo;Bhadram karnebhih srunuyama devah. Bhadram pasyemaksabhir
-              yajatrah. Sthirair angais tustuvamsas tanubhir, Vyasema
-              devahitam yadayuh.&rdquo;
-            </blockquote>
-            <span class="rule rule--olive sloka__rule" aria-hidden="true"></span>
-            <figcaption class="sloka__translation">
-              Ya Hyang Widhi Wasa, semoga telinga kami senantiasa mendengar
-              hal-hal yang suci. Semoga mata kami senantiasa melihat kebaikan
-              dalam pengabdian kami. Dengan tubuh yang teguh, izinkanlah kami
-              memuji keagungan-Mu sepanjang usia yang Engkau anugerahkan.
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 · Sane Mepandes -->
-    <section class="section section--bone names" id="sane-mepandes">
-      <div class="plate plate--names-waringin" aria-hidden="true"></div>
-      <div class="plate plate--names-pura" aria-hidden="true"></div>
-
-      <div class="container">
-        <div class="names__head">
-          <div class="names__title reveal">
-            <h2 class="script script--xl">Sane Mepandes</h2>
-          </div>
-          <p class="names__note reveal">
-            Kedua putra kami yang akan menjalani Upacara Manusa Yadnya
-            Mepandes (Potong Gigi).
-          </p>
-        </div>
-
-        <div class="portraits">
-          <article class="portrait reveal">
-            <div class="portrait__arch">
-              <img src="assets/yoga.webp" alt="I Putu Yoga Semara Putra" width="760" height="1342" loading="lazy" />
-            </div>
-            <div class="portrait__meta">
-              <p class="portrait__kicker">PUTRA PERTAMA</p>
-              <h3 class="display display--name">I Putu Yoga Semara Putra</h3>
-              <span class="rule rule--olive portrait__rule" aria-hidden="true"></span>
-              <p class="portrait__role">
-                Putra Pertama dari Pasangan<br />
-                Bapak I Made Sukarme &amp; Ibu Ni Ketut Supen
-              </p>
-            </div>
-          </article>
-
-          <article class="portrait reveal">
-            <div class="portrait__arch">
-              <img src="assets/ditya.webp" alt="I Made Ditya Andala Putra" width="760" height="1345" loading="lazy" />
-            </div>
-            <div class="portrait__meta">
-              <p class="portrait__kicker">PUTRA KEDUA</p>
-              <h3 class="display display--name">I Made Ditya Andala Putra</h3>
-              <span class="rule rule--olive portrait__rule" aria-hidden="true"></span>
-              <p class="portrait__role">
-                Putra Kedua dari Pasangan<br />
-                Bapak I Made Sukarme &amp; Ibu Ni Ketut Supen
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 · Countdown -->
-    <section class="section section--ink countdown" id="countdown" aria-labelledby="countdownTitle">
-      <div class="container countdown__row">
-        <div class="countdown__head reveal">
-          <h2 class="script script--md" id="countdownTitle">
-            Menghitung Hari
-          </h2>
-        </div>
-
-        <div class="countdown__units reveal" id="countdownTimer" role="group"
-          aria-label="Hitungan mundur menuju hari upacara">
-          <div class="countdown__unit">
-            <span class="countdown__value" id="days">00</span>
-            <span class="countdown__label">HARI</span>
-          </div>
-          <div class="countdown__unit">
-            <span class="countdown__value" id="hours">00</span>
-            <span class="countdown__label">JAM</span>
-          </div>
-          <div class="countdown__unit">
-            <span class="countdown__value" id="minutes">00</span>
-            <span class="countdown__label">MENIT</span>
-          </div>
-          <div class="countdown__unit">
-            <span class="countdown__value" id="seconds">00</span>
-            <span class="countdown__label">DETIK</span>
-          </div>
-        </div>
-        <p class="sr-only" id="countdownStatus" aria-live="polite"></p>
-      </div>
-    </section>
-
-    <!-- 04 · Waktu & Lokasi -->
-    <section class="section section--paper location" id="lokasi">
-      <div class="container location__spread">
-        <div class="location__details reveal">
-          <h2 class="display display--md">Waktu &amp; Lokasi</h2>
-          <p class="script script--sm location__date">
-            <time datetime="2026-11-15">Minggu, 15 November 2026</time>
-          </p>
-
-          <dl class="facts">
-            <div class="facts__row">
-              <dt class="label">PUKUL</dt>
-              <dd class="facts__value">08.00 — 12.00 WITA</dd>
-            </div>
-            <div class="facts__row">
-              <dt class="label">TEMPAT</dt>
-              <dd class="facts__value">Taman Prakerti Bhuana</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="map reveal">
-          <div class="map__frame">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3945.7288267287927!2d115.3259945!3d-8.5256867!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd216542cc4ede7%3A0x2308fdb0be993019!2sTaman%20Prakerti%20Bhuana!5e0!3m2!1sid!2sid!4v1792326540569!5m2!1sid!2sid"
-              title="Peta lokasi Taman Prakerti Bhuana" width="640" height="450" style="border: 0" allowfullscreen=""
-              loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
-        </figure>
-
-        <div class="location__action reveal">
-          <a class="btn btn--outline" href="https://maps.app.goo.gl/CgcctwgqfgZM9Anq9" target="_blank" rel="noopener">
-            <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>PETUNJUK MENUJU LOKASI</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 05 · RSVP -->
-    <section class="section section--blush rsvp" id="rsvp" aria-labelledby="rsvpTitle">
-      <div class="butterfly butterfly--top-left" aria-hidden="true"></div>
-      <div class="butterfly butterfly--top-centre" aria-hidden="true"></div>
-      <div class="butterfly butterfly--bottom-right" aria-hidden="true"></div>
-
-      <div class="container rsvp__spread">
-        <div class="rsvp__card reveal">
-          <h2 class="display display--sm" id="rsvpTitle">
-            Konfirmasi Kehadiran
-          </h2>
-          <p class="rsvp__note">
-            Merupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan
-            hadir pada upacara kami.
-          </p>
-
-          <form class="rsvp__form" id="rsvpForm" novalidate>
-            <div class="field">
-              <label class="label" for="rsvpName">NAMA</label>
-              <input class="field__input" type="text" id="rsvpName" name="name" placeholder="Nama" autocomplete="name"
-                maxlength="80" aria-describedby="rsvpNameError" required />
-              <p class="field__error" id="rsvpNameError" hidden>
-                Mohon isi nama Anda.
-              </p>
-            </div>
-
-            <fieldset class="field field--choice" aria-describedby="rsvpAttendanceError">
-              <legend class="label">KEHADIRAN</legend>
-              <div class="choice-row">
-                <label class="choice">
-                  <input class="sr-only" type="radio" name="attendance" value="hadir" required />
-                  <span class="choice__pill">
-                    <span class="choice__dot" aria-hidden="true"></span>
-                    <span>HADIR</span>
-                  </span>
-                </label>
-                <label class="choice">
-                  <input class="sr-only" type="radio" name="attendance" value="tidak" required />
-                  <span class="choice__pill">
-                    <span class="choice__dot" aria-hidden="true"></span>
-                    <span>TIDAK HADIR</span>
-                  </span>
-                </label>
+          <div class="portraits">
+            <article class="portrait reveal">
+              <div class="portrait__arch">
+                <img
+                  src="assets/yoga.webp"
+                  alt="I Putu Yoga Semara Putra"
+                  width="760"
+                  height="1342"
+                  loading="lazy"
+                />
               </div>
-              <p class="field__error" id="rsvpAttendanceError" hidden>
-                Mohon pilih konfirmasi kehadiran Anda.
-              </p>
-            </fieldset>
+              <div class="portrait__meta">
+                <p class="portrait__kicker">PUTRA PERTAMA</p>
+                <h3 class="display display--name">I Putu Yoga Semara Putra</h3>
+                <span
+                  class="rule rule--olive portrait__rule"
+                  aria-hidden="true"
+                ></span>
+                <p class="portrait__role">
+                  Putra Pertama dari Pasangan<br />
+                  Bapak I Made Sukarme &amp; Ibu Ni Ketut Supen
+                </p>
+              </div>
+            </article>
 
-            <div class="field">
-              <label class="label" for="rsvpMessage">UCAPAN &amp; DOA</label>
-              <textarea class="field__input field__textarea" id="rsvpMessage" name="message" rows="3" maxlength="500"
-                placeholder="Tuliskan doa dan harapan…" aria-describedby="rsvpMessageError" required></textarea>
-              <p class="field__error" id="rsvpMessageError" hidden>
-                Mohon isi ucapan dan doa Anda.
-              </p>
-            </div>
-
-            <p class="form-status" id="formStatus" role="status"></p>
-
-            <button class="btn btn--filled rsvp__submit" id="btnSubmit" type="submit">
-              <span id="btnSubmitLabel">KIRIM KONFIRMASI</span>
-            </button>
-          </form>
+            <article class="portrait reveal">
+              <div class="portrait__arch">
+                <img
+                  src="assets/ditya.webp"
+                  alt="I Made Ditya Andala Putra"
+                  width="760"
+                  height="1345"
+                  loading="lazy"
+                />
+              </div>
+              <div class="portrait__meta">
+                <p class="portrait__kicker">PUTRA KEDUA</p>
+                <h3 class="display display--name">I Made Ditya Andala Putra</h3>
+                <span
+                  class="rule rule--olive portrait__rule"
+                  aria-hidden="true"
+                ></span>
+                <p class="portrait__role">
+                  Putra Kedua dari Pasangan<br />
+                  Bapak I Made Sukarme &amp; Ibu Ni Ketut Supen
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="guestbook reveal">
-          <h2 class="script script--md guestbook__title">Ucapan &amp; Doa</h2>
-          <p class="guestbook__note">
-            Doa dan harapan dari keluarga serta kerabat untuk upacara
-            Mepandes.
-          </p>
+      <!-- 03 · Countdown -->
+      <section
+        class="section section--ink countdown"
+        id="countdown"
+        aria-labelledby="countdownTitle"
+      >
+        <div class="container countdown__row">
+          <div class="countdown__head reveal">
+            <h2 class="script script--md" id="countdownTitle">
+              Menghitung Hari
+            </h2>
+          </div>
 
-          <div class="guestbook__entries" id="wishesList"></div>
+          <div
+            class="countdown__units reveal"
+            id="countdownTimer"
+            role="group"
+            aria-label="Hitungan mundur menuju hari upacara"
+          >
+            <div class="countdown__unit">
+              <span class="countdown__value" id="days">00</span>
+              <span class="countdown__label">HARI</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="hours">00</span>
+              <span class="countdown__label">JAM</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="minutes">00</span>
+              <span class="countdown__label">MENIT</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="seconds">00</span>
+              <span class="countdown__label">DETIK</span>
+            </div>
+          </div>
+          <p class="sr-only" id="countdownStatus" aria-live="polite"></p>
+        </div>
+      </section>
 
-          <button class="text-link" id="showAllWishes" type="button" hidden>
-            <span id="showAllLabel">LIHAT SEMUA UCAPAN →</span>
-          </button>
+      <!-- 04 · Waktu & Lokasi -->
+      <section class="section section--paper location" id="lokasi">
+        <div class="container location__spread">
+          <div class="location__details reveal">
+            <h2 class="display display--md">Waktu &amp; Lokasi</h2>
+            <p class="script script--sm location__date">
+              <time datetime="2026-11-15">Minggu, 15 November 2026</time>
+            </p>
 
-          <!-- Panel admin: hanya muncul jika URL memakai ?admin=true.
-               Hak hapus tetap ditentukan Supabase Auth + RLS. -->
-          <div class="admin" id="adminPanel" hidden>
-            <form class="admin__form" id="adminLoginForm" novalidate>
-              <p class="label">MASUK ADMIN</p>
-              <input class="field__input" type="email" id="adminEmail" name="email" placeholder="Email admin"
-                autocomplete="username" aria-label="Email admin" required />
-              <input class="field__input" type="password" id="adminPassword" name="password" placeholder="Kata sandi"
-                autocomplete="current-password" aria-label="Kata sandi admin" required />
-              <button class="btn btn--outline" id="adminLoginBtn" type="submit">
-                <span>MASUK</span>
+            <dl class="facts">
+              <div class="facts__row">
+                <dt class="label">PUKUL</dt>
+                <dd class="facts__value">08.00 — 12.00 WITA</dd>
+              </div>
+              <div class="facts__row">
+                <dt class="label">TEMPAT</dt>
+                <dd class="facts__value">Taman Prakerti Bhuana</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="map reveal">
+            <div class="map__frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3945.7288267287927!2d115.3259945!3d-8.5256867!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd216542cc4ede7%3A0x2308fdb0be993019!2sTaman%20Prakerti%20Bhuana!5e0!3m2!1sid!2sid!4v1792326540569!5m2!1sid!2sid"
+                title="Peta lokasi Taman Prakerti Bhuana"
+                width="640"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </figure>
+
+          <div class="location__action reveal">
+            <a
+              class="btn btn--outline"
+              href="https://maps.app.goo.gl/CgcctwgqfgZM9Anq9"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                class="icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>PETUNJUK MENUJU LOKASI</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 · RSVP -->
+      <section
+        class="section section--blush rsvp"
+        id="rsvp"
+        aria-labelledby="rsvpTitle"
+      >
+        <div class="butterfly butterfly--top-left" aria-hidden="true"></div>
+        <div class="butterfly butterfly--top-centre" aria-hidden="true"></div>
+        <div class="butterfly butterfly--bottom-right" aria-hidden="true"></div>
+
+        <div class="container rsvp__spread">
+          <div class="rsvp__card reveal">
+            <h2 class="display display--sm" id="rsvpTitle">
+              Konfirmasi Kehadiran
+            </h2>
+            <p class="rsvp__note">
+              Merupakan suatu kebahagiaan apabila Bapak/Ibu/Saudara/i berkenan
+              hadir pada upacara kami.
+            </p>
+
+            <form class="rsvp__form" id="rsvpForm" novalidate>
+              <div class="field">
+                <label class="label" for="rsvpName">NAMA</label>
+                <input
+                  class="field__input"
+                  type="text"
+                  id="rsvpName"
+                  name="name"
+                  placeholder="Nama"
+                  autocomplete="name"
+                  maxlength="80"
+                  aria-describedby="rsvpNameError"
+                  required
+                />
+                <p class="field__error" id="rsvpNameError" hidden>
+                  Mohon isi nama Anda.
+                </p>
+              </div>
+
+              <fieldset
+                class="field field--choice"
+                aria-describedby="rsvpAttendanceError"
+              >
+                <legend class="label">KEHADIRAN</legend>
+                <div class="choice-row">
+                  <label class="choice">
+                    <input
+                      class="sr-only"
+                      type="radio"
+                      name="attendance"
+                      value="hadir"
+                      required
+                    />
+                    <span class="choice__pill">
+                      <span class="choice__dot" aria-hidden="true"></span>
+                      <span>HADIR</span>
+                    </span>
+                  </label>
+                  <label class="choice">
+                    <input
+                      class="sr-only"
+                      type="radio"
+                      name="attendance"
+                      value="tidak"
+                      required
+                    />
+                    <span class="choice__pill">
+                      <span class="choice__dot" aria-hidden="true"></span>
+                      <span>TIDAK HADIR</span>
+                    </span>
+                  </label>
+                </div>
+                <p class="field__error" id="rsvpAttendanceError" hidden>
+                  Mohon pilih konfirmasi kehadiran Anda.
+                </p>
+              </fieldset>
+
+              <div class="field">
+                <label class="label" for="rsvpMessage">UCAPAN &amp; DOA</label>
+                <textarea
+                  class="field__input field__textarea"
+                  id="rsvpMessage"
+                  name="message"
+                  rows="3"
+                  maxlength="500"
+                  placeholder="Tuliskan doa dan harapan…"
+                  aria-describedby="rsvpMessageError"
+                  required
+                ></textarea>
+                <p class="field__error" id="rsvpMessageError" hidden>
+                  Mohon isi ucapan dan doa Anda.
+                </p>
+              </div>
+
+              <p class="form-status" id="formStatus" role="status"></p>
+
+              <button
+                class="btn btn--filled rsvp__submit"
+                id="btnSubmit"
+                type="submit"
+              >
+                <span id="btnSubmitLabel">KIRIM KONFIRMASI</span>
               </button>
             </form>
-            <div class="admin__session" id="adminSession" hidden>
-              <p class="label">MODE ADMIN AKTIF</p>
-              <button class="btn btn--outline" id="adminSignOut" type="button">
-                <span>KELUAR</span>
+          </div>
+
+          <div class="guestbook reveal">
+            <h2 class="script script--md guestbook__title">Ucapan &amp; Doa</h2>
+            <p class="guestbook__note">
+              Doa dan harapan dari keluarga serta kerabat untuk upacara
+              Mepandes.
+            </p>
+
+            <!-- Filter kehadiran: hanya tampil untuk admin -->
+            <div
+              class="rsvp-summary"
+              id="rsvpSummary"
+              role="group"
+              aria-label="Tampilkan ucapan berdasarkan kehadiran"
+              hidden
+            >
+              <button
+                class="rsvp-filter is-active"
+                type="button"
+                data-filter="semua"
+                aria-pressed="true"
+              >
+                <span class="rsvp-filter__count" id="countAll">–</span>
+                <span class="rsvp-filter__label">SEMUA</span>
+              </button>
+              <button
+                class="rsvp-filter"
+                type="button"
+                data-filter="hadir"
+                aria-pressed="false"
+              >
+                <span class="rsvp-filter__count" id="countHadir">–</span>
+                <span class="rsvp-filter__label">HADIR</span>
+              </button>
+              <button
+                class="rsvp-filter"
+                type="button"
+                data-filter="tidak"
+                aria-pressed="false"
+              >
+                <span class="rsvp-filter__count" id="countTidak">–</span>
+                <span class="rsvp-filter__label">TIDAK HADIR</span>
               </button>
             </div>
-            <p class="form-status" id="adminStatus" role="status"></p>
+
+            <!-- Jumlah komentar: hanya tampil untuk tamu (non-admin) -->
+            <div class="guest-count" id="guestCount">
+              <span class="guest-count__number" id="guestCountNumber">–</span>
+              <span class="guest-count__label">KOMENTAR</span>
+            </div>
+
+            <button
+              class="sort-toggle"
+              id="sortToggle"
+              type="button"
+              aria-label="Ubah urutan komentar"
+            >
+              <svg
+                class="sort-toggle__icon"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14" />
+                <path d="m19 12-7 7-7-7" />
+              </svg>
+              <span class="sort-toggle__label" id="sortLabel">TERBARU</span>
+            </button>
+
+            <div class="guestbook__entries" id="wishesList"></div>
+
+            <button class="text-link" id="showAllWishes" type="button" hidden>
+              <span id="showAllLabel">LIHAT SEMUA UCAPAN →</span>
+            </button>
+
+            <!-- Panel admin: hanya muncul jika URL memakai token rahasia.
+               Contoh: ?panel=yds-mpdns-7Kx9Qw2
+               Hak hapus tetap ditentukan Supabase Auth + RLS. -->
+            <div class="admin" id="adminPanel" hidden>
+              <form class="admin__form" id="adminLoginForm" novalidate>
+                <p class="label">MASUK ADMIN</p>
+                <input
+                  class="field__input"
+                  type="password"
+                  id="adminPassword"
+                  name="password"
+                  placeholder="Kata sandi"
+                  autocomplete="current-password"
+                  aria-label="Kata sandi admin"
+                  required
+                />
+                <button
+                  class="btn btn--outline"
+                  id="adminLoginBtn"
+                  type="submit"
+                >
+                  <span>MASUK</span>
+                </button>
+              </form>
+              <div class="admin__session" id="adminSession" hidden>
+                <p class="label">MODE ADMIN AKTIF</p>
+                <button
+                  class="btn btn--outline"
+                  id="adminSignOut"
+                  type="button"
+                >
+                  <span>KELUAR</span>
+                </button>
+              </div>
+              <p class="form-status" id="adminStatus" role="status"></p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 06 · Penutup -->
-    <footer class="closing">
-      <p class="script script--lg closing__script">Matur Suksma</p>
-      <span class="rule rule--ink closing__rule" aria-hidden="true"></span>
-      <p class="closing__body">
-        Atas perhatian Bapak/Ibu/Saudara/i, kami haturkan terima kasih. Kami
-        yang berbahagia,
-      </p>
-      <div class="closing__colophon">
-        <p class="closing__copyright">
-          © 2026 UNINGIN.COM · JASA UNDANGAN ONLINE
+      <!-- 06 · Penutup -->
+      <footer class="closing">
+        <p class="script script--lg closing__script">Matur Suksma</p>
+        <span class="rule rule--ink closing__rule" aria-hidden="true"></span>
+        <p class="closing__body">
+          Atas perhatian Bapak/Ibu/Saudara/i, kami haturkan terima kasih. Kami
+          yang berbahagia,
         </p>
-      </div>
-    </footer>
-  </main>
+        <div class="closing__colophon">
+          <p class="closing__copyright">
+            © 2026 UNINGIN.COM · JASA UNDANGAN ONLINE
+          </p>
+        </div>
+      </footer>
+    </main>
 
-  <audio id="bgMusic" src="assets/Ratu Anom - Balinese Instrumental - Sugi Art.mp3" loop preload="none"></audio>
+    <audio
+      id="bgMusic"
+      src="assets/Ratu Anom - Balinese Instrumental - Sugi Art.mp3"
+      loop
+      preload="none"
+    ></audio>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script defer src="script.js"></script>
-</body>
-
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+    <script defer src="script.js"></script>
+  </body>
 </html>
