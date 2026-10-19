@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("marcellus-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("nunito-sans-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Parisienne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("parisienne-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("playfair-display-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("playfair-display-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("red-hat-display-500-normal.woff2") format("woff2");
+}
