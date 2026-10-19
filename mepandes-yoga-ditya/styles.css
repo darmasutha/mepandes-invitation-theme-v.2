@@ -426,7 +426,6 @@ legend {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(3px);
   transform: scale(1.012);
 }
 
