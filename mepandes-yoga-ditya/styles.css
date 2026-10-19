@@ -1450,6 +1450,42 @@ legend {
   line-height: 1.7;
 }
 
+.sort-toggle {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 5px;
+  padding: 5px 12px;
+  border: 1px solid var(--olive-soft);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--olive);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 150ms ease-out,
+    border-color 150ms ease-out;
+}
+.sort-toggle__icon {
+  transition: transform 250ms ease-out;
+}
+.sort-toggle.is-flipped .sort-toggle__icon {
+  transform: rotate(180deg);
+}
+.sort-toggle__label {
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.3;
+}
+@media (hover: hover) and (pointer: fine) {
+  .sort-toggle:hover {
+    background: rgba(107, 101, 79, 0.08);
+    border-color: var(--olive);
+  }
+}
+
 .guestbook__entries {
   display: flex;
   flex-direction: column;
