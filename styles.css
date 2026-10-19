@@ -515,6 +515,11 @@
     line-height: 1.75;
   }
   
+  .gate__guest {
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+  
   .gate__noscript {
     max-width: 320px;
     color: var(--cream);
