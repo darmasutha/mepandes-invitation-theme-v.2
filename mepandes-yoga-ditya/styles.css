@@ -509,14 +509,6 @@ legend {
   line-height: 1.5;
 }
 
-.gate__intro {
-  width: min(430px, 100%);
-  color: var(--cream);
-  font-family: var(--font-serif);
-  font-size: clamp(12px, 0.9722vw, 14px);
-  line-height: 1.75;
-}
-
 .gate__invitee {
   display: flex;
   flex-direction: column;
@@ -1977,12 +1969,6 @@ legend {
   .gate__subtitle {
     font-size: 8px;
     letter-spacing: 3.5px;
-  }
-
-  .gate__intro {
-    width: min(290px, 100%);
-    font-size: 12px;
-    line-height: 1.7;
   }
 
   .gate__centre .btn {
